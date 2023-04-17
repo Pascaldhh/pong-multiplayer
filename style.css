@@ -1,0 +1,102 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --header-height: 150px;
+  --primary: 58, 134, 255;
+  --button: rgb(var(--primary));
+  --button-hover: rgb(var(--primary), .8);
+  --border: rgb(var(--primary), .9);
+}
+
+h1, h2, h3, h4, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  height: var(--header-height);
+  display: grid;
+  place-items: center;
+}
+
+#screen-main-menu {
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+}
+#screen-main-menu button {
+  cursor: pointer;
+  border: none;
+  background-color: var(--button);
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  transition: .1s background-color ease-in-out;
+  margin: 0;
+}
+#screen-main-menu button:hover {
+  background-color: var(--button-hover);
+}
+#screen-main-menu #create-room {
+  padding: 10px 0;
+  border-radius: 15px;
+}
+#screen-main-menu #join-room {
+  padding: 5px 10px;
+}
+#screen-main-menu #input-join-room {
+  border: none;
+  padding-left: 10px;
+}
+#screen-main-menu #input-join-room:focus-visible {
+  outline: none;
+}
+#screen-main-menu .join-group {
+  display: flex;
+  border: 2px solid var(--border);
+  border-radius: 15px;
+  overflow: hidden;
+}
+#screen-main-menu .inner-screen {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#screen-main-menu .inner-screen > p {
+  font-size: 18px;
+  font-weight: 700;
+}
+#screen-main-menu #error-msg-room {
+  color: red;
+  font-weight: 600;
+  font-size: 15px;
+  margin-top: -15px;
+}
+.hide {
+  display: none !important;
+}
+
+#screen-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#screen-game #game-code {
+  font-weight: bold;
+  font-size: 18px;
+}
+#screen-game canvas {
+  background-color: lightblue;
+}
+#screen-game .score-cont {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
