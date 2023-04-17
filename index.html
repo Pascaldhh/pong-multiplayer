@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Pong</title>
+</head>
+<body>
+  <header>
+    <h1>Pong</h1>
+  </header>
+  <div id="screen-main-menu">
+    <div class="inner-screen">
+      <button id="create-room">Create room</button>
+      <p>OR</p>
+      <div class="join-group">
+        <input id="input-join-room" type="text"><button id="join-room">Join</button>
+      </div>
+      <p id="error-msg-room"></p>
+    </div>
+  </div>
+  <div id="screen-game" class="hide">
+    <p id="game-code"></p>
+    <div class="score-cont hide">
+      <div id="player-one">Player one: <span id="score"></span></div>
+      <div id="player-two">Player two: <span id="score"></span></div>
+    </div>
+    <canvas id="pong-game" class="hide"></canvas>
+  </div>
+  <script src="./server/node_modules/socket.io/client-dist/socket.io.js"></script>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
